@@ -1,0 +1,12 @@
+{
+  "extends": "../tsconfig.json",
+  "include": [
+    "src/**/*"
+  ],
+  "compilerOptions": {
+    "module": "CommonJS",
+    "lib": [
+      "es2019"
+    ]
+  }
+}

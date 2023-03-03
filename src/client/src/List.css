@@ -1,0 +1,76 @@
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+}
+
+.board {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  border-left: double 6px #111;
+}
+
+.lane {
+  list-style: none;
+  margin: 0 0 0 -2px;
+  padding: 16px 16px 16px 0;
+}
+
+.item-content {
+  display: inline-flex;
+  border: solid 2px #111;
+  padding-left: 8px;
+}
+
+.item::before {
+  content: "";
+  display: inline-block;
+  margin-right: 16px;
+  padding: 4px;
+  vertical-align: middle;
+  line-height: 0;
+  border: solid #111;
+  border-width: 0 0 2px 2px;
+  min-width: 32px;
+}
+
+.promoted {
+  padding-left: 80px;
+}
+
+.item-name,
+[class^="action"] {
+  padding: 8px;
+}
+
+.action-promote,
+.action-demote {
+  display: inline-block;
+  border: solid #111;
+  background: none;
+  font-size: 0;
+}
+
+.action-promote {
+  border-width: 0 0 0 2px;
+}
+
+.action-demote {
+  border-width: 0 2px 0 0;
+  order: -1;
+}
+
+.action-promote::after,
+.action-demote::after {
+  font-size: 16px;
+}
+
+.action-promote::after {
+  content: "⇨";
+}
+
+.action-demote::after {
+  content: "⇦";
+}
