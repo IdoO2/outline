@@ -1,20 +1,18 @@
-import React from "react";
-import "./List.css";
 import pngSpec from "./spec-list.png";
+import "./App.css";
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-function Item() {
+function Item({ proOrDe }: { proOrDe: string }) {
   return (
     <div className="item">
       <div className="item-content">
         <strong className="item-name">Item</strong>
-        <button className="action-promote">Move</button>
+        <div className={`action-${proOrDe}mote`}>Move</div>
       </div>
     </div>
   );
 }
 
-export const List = () => {
+function App() {
   const txtSpec = `
   Ordered list app.
   Features:
@@ -25,4 +23,6 @@ export const List = () => {
   `;
 
   return <img src={pngSpec} alt={txtSpec} width="400" />;
-};
+}
+
+export default App;
