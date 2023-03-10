@@ -6,6 +6,12 @@ We have a broken and unfinished client/server tree sorter app. HALP! :( Please f
 
 Do as many of these as you can, in the order presented:
 
-- **it should render out tree;** The CSS is kinda ready, but we forgot how to use it
-- **make items change level;** we should be able to click on something within an item to move it up or down a level. There should be only 2 levels, so if we move something left, it should become a sibling of its parent, and if we move something right, it should become a child of its previous sibling (if present).
-- **fetch items from the API** reachable at `/api` (see `/server` folder for details, not sure it works though). The server should return a list of items and you should be able to move them around.
+- **it should render our tree;** The CSS is _kinda_ ready (may need some tweaking), but we forgot how to use it
+- **make items change level;** We should be able to click on something within an item to move it up or down a level. There should be only 2 levels and an item should always be a child of another item or the root.
+- **load/save our items to the database;** See `/server` folder for details. When you click Save the current state is saved to the database, and when you click Load the state is loaded from the database.
+
+## Notes
+
+- If you can put each feature in a separate commit, that would be great
+- There are no real relationships between the items, so you they can freely be moved around individually, taking consraints described earlier into account
+- Our designer is very angry with us when we do not follow the design, so please check the result against the provided reference image
